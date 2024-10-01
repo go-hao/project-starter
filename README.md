@@ -18,7 +18,7 @@ make help
 # Project repo address and repo namespace
 # The project module name will be: [repo_addr/][repo_name/]project_name
 # Comment it out or leave it blank to unset a variable
-repo_addr := gitlab.com
+repo_addr := github.com
 repo_name := go-hao
 
 # Project name
