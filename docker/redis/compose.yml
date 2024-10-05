@@ -4,3 +4,11 @@ services:
     restart: always
     ports: # HOST:CONTAINER
       - 6379:6379
+    volumes: # HOST:CONTAINER
+      - ./data:/data
+    environment:
+      REDIS_PASSWORD: letmein
+    command:
+      - /bin/sh
+      - -c
+      - "redis-server --requirepass $$REDIS_PASSWORD"
