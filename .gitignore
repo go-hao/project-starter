@@ -29,4 +29,4 @@ go.work.sum
 
 # Custom folders
 bin/
-db/
+data/
