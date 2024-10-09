@@ -139,6 +139,11 @@ all: $(for_cmd_tars)
 swag:
 	swag init -g ./cmd/$(main_name)/main.go
 
+## wire: generate the wire_gen.go in ./wired
+.PHONY: wire
+wire:
+	@cd ./wired; wire
+
 # ############################################################# #
 # Docker services                                               #
 # ############################################################# #
