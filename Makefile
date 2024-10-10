@@ -106,7 +106,7 @@ run: build
 
 ## build: build the project
 .PHONY: build
-build: tidy
+build: tidy wire
 	go build -v -o ./bin/$(main_name) ./cmd/$(main_name)
 
 ## tidy: tidy modfile and format code
@@ -142,7 +142,9 @@ swag:
 ## wire: generate the wire_gen.go in ./wired
 .PHONY: wire
 wire:
-	@cd ./wired; wire
+	@if [ -d ./wired ]; then \
+		cd ./wired; wire; \
+	fi
 
 # ############################################################# #
 # Docker services                                               #
